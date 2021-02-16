@@ -89,6 +89,7 @@ spec:
         operator: "Equal"
         value: "true"
         effect: "NoSchedule"
+  # this one added..
   # A `volumeClaimTemplate` of `16Gi` of Block Storage is configured and used for Prometheus data storage, mounted at `/data/`
   volumeClaimTemplates:
   - metadata:
