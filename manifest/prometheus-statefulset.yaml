@@ -84,6 +84,11 @@ spec:
                 values:
                 - prometheus
             topologyKey: "kubernetes.io/hostname"
+      tolerations:
+      - key: "monitoringnode"
+        operator: "Equal"
+        value: "true"
+        effect: "NoSchedule"
   # A `volumeClaimTemplate` of `16Gi` of Block Storage is configured and used for Prometheus data storage, mounted at `/data/`
   volumeClaimTemplates:
   - metadata:
